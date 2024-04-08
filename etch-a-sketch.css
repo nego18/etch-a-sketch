@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: darkblue;
+    color: #fff;
+    cursor: pointer;
+}
+
+.square {
+    width: 40px;
+    height: 40px;
+    border: 1px solid red;
+}
+
+.newSquare {
+    border: 1px solid green;
+}
+
+@keyframes squareAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+span {
+    position: absolute;
+    pointer-events: none;
+    width: 1px;
+    height: 1px;
+    background: red;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        translate: 0 0;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    30% {
+        translate: 0 100px;
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        translate: 0 80px;
+        opacity: 0;
+    }
+}
